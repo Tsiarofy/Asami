@@ -1,50 +1,90 @@
-# Welcome to your Expo app 👋
+# Asami
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Asami** est une application mobile développée avec [Expo](https://expo.dev/) et React Native, conçue pour répondre au besoin d'un groupe de chorale souhaitant faciliter la gestion et l'accès à leurs partitions de chansons.
 
-## Get started
+## Objectif
 
-1. Install dependencies
+Ce projet a été créé pour permettre à une chorale de :
+- Centraliser les partitions et paroles de chansons
+- Rechercher rapidement un titre ou une partition
+- Ajouter ou supprimer facilement des chansons via un espace administrateur
+- Accéder aux partitions depuis un smartphone, une tablette ou le web
+- Bénéficier d'une interface moderne avec gestion du thème clair/sombre
 
-   ```bash
+## Fonctionnalités
+
+- 🔍 Recherche de chansons par titre
+- 📂 Catégorisation des chansons (par table SQLite)
+- 👁️ Affichage des paroles
+- ➕ Ajout de nouvelles chansons via un espace admin sécurisé
+- 🗑️ Suppression de chansons existantes
+- 🎨 Thème clair/sombre personnalisable
+- 📱 Compatible Android, iOS et Web
+
+## Installation
+
+1. **Cloner le dépôt :**
+   ```sh
+   git clone https://github.com/Tsiarofy/asami.git
+   cd asami
+   ```
+
+2. **Installer les dépendances :**
+   ```sh
    npm install
    ```
 
-2. Start the app
-
-   ```bash
-   npx expo start
+3. **Lancer l’application :**
+   ```sh
+   npm start
+   ```
+   Ou pour une plateforme spécifique :
+   ```sh
+   npm run android
+   npm run ios
+   npm run web
    ```
 
-In the output, you'll find options to open the app in a
+## Structure du projet
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- `app/` : Pages principales (accueil, admin, ajout, suppression, affichage des paroles)
+- `component/` : Composants réutilisables (boutons, cartes, barre de recherche, etc.)
+- `constant/` : Fichiers de constantes (couleurs, ombres, opacités)
+- `configuration/` : Gestion de la base de données SQLite
+- `context/` : Contexte global pour le thème
+- `assets/` : Images et polices
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Technologies
 
-## Get a fresh project
+- [Expo](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/)
+- [Expo Router](https://expo.github.io/router/docs/)
+- [React Navigation](https://reactnavigation.org/)
 
-When you're ready, run:
+## Scripts utiles
 
-```bash
-npm run reset-project
-```
+- `npm start` : Démarre le projet Expo
+- `npm run android` : Lance sur un appareil Android
+- `npm run ios` : Lance sur un simulateur iOS
+- `npm run web` : Lance la version web
+- `npm run lint` : Lint le code
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Personnalisation
 
-## Learn more
+- Les couleurs et thèmes sont configurables dans `constant/color.ts` et `context/themeContext.tsx`.
+- Les catégories de chansons sont gérées via des tables SQLite (voir `configuration/openDatabase.tsx`).
 
-To learn more about developing your project with Expo, look at the following resources:
+## Auteur
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [Tsiarofy](https://github.com/Tsiarofy)
 
-## Join the community
 
-Join our community of developers creating universal apps.
+## Confidentialité des données
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+> **Note** : La base de données `song.db` fournie dans ce dépôt contient uniquement des données fictives. Les données réelles de la chorale ne sont pas exposées afin de préserver leur confidentialité.
+
+## Licence
+
+Ce projet utilise la licence MIT. Les polices Roboto sont sous licence SIL Open Font License (voir `assets/fonts/OFL.txt`).

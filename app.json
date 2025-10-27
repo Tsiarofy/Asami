@@ -1,22 +1,24 @@
 {
   "expo": {
-    "name": "Monprojet",
+    "name": "Asami",
     "slug": "Monprojet",
     "version": "1.0.0",
+    "platforms": ["android", "ios"],
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "monprojet",
+    "icon": "./assets/images/favicon.png",
+    "scheme": "asami",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/favicon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.luctsiarofy.asami"
     },
     "web": {
       "bundler": "metro",
@@ -28,15 +30,32 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/favicon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#F5EDE5",
+          "dark": {
+            "backgroundColor": "#2F343F"
+          }
         }
-      ]
+      ],
+      "expo-font",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "21b8edb6-4956-4f3f-bc45-0b7d487cb554"
+      }
+    },
+    "owner": "luctsiarofy",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/21b8edb6-4956-4f3f-bc45-0b7d487cb554",
+      "fallbackToCacheTimeout": 0
     }
   }
 }
