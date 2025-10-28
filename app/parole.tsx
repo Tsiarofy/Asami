@@ -60,8 +60,8 @@ const getStyle = (theme: "light" | "dark") => {
       flex: 1
     },
     paroleText: {
-      textAlign: 'center', // Conserve l'alignement centré
-      padding: 10, // Ajoute un peu d'espace autour du texte
+      textAlign: 'center', 
+      padding: 10, 
     },
     title: {
       flexDirection: 'row',
