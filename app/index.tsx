@@ -193,14 +193,26 @@ export default function Index() {
 
 const getStyle = (theme: 'light' | 'dark') => StyleSheet.create({
   container: { flex: 1 },
-  musicContainer: { flexDirection: 'row' },
-  card: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 7 },
+  musicContainer: { 
+    flexDirection: 'row'
+  },
+  card: {
+    flexDirection: 'row'
+    , alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 7 },
   header: {
-    width: 80, height: 30, margin: 10, borderRadius: 12,
+    width: 80,
+    height: 30,
+    margin: 10,
+    borderRadius: 12,
     backgroundColor: color[theme].fondTitle,
     ...shadows[theme].dp1
   },
-  title: { flexDirection: 'row', alignItems: 'center' },
+  title: { 
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
   search: {
     backgroundColor: color[theme].fondSearchBare,
     height: 40, marginHorizontal: 12,
@@ -213,14 +225,29 @@ const getStyle = (theme: 'light' | 'dark') => StyleSheet.create({
     ...shadows[theme].dp2
   },
   hiraBody: {
-    marginTop: 4, paddingVertical: 8,marginHorizontal:3, backgroundColor: color[theme].fondBody,
-    borderRadius: 15, flex: 1
+    marginTop: 4, 
+    paddingVertical: 8,
+    marginHorizontal:3,
+    backgroundColor: color[theme].fondBody,
+    borderRadius: 15, 
+    flex: 1
   },
-  iconContainer: { flexDirection: 'row', justifyContent: 'space-around' },
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
   iconBar: {
-    backgroundColor: color[theme].tint, paddingVertical: 10, marginTop: 4,
-    borderRadius: 8, height: 45, paddingTop: 12
+    backgroundColor: color[theme].tint,
+    paddingVertical: 10, marginTop: 4,
+    borderRadius: 8, 
+    height: 45, 
+    paddingTop: 12
   },
-  tab: { alignItems: 'center' },
-  emptyContainer: { padding: 20, alignItems: 'center', justifyContent: 'center' }
+  tab: {
+    alignItems: 'center'
+  },
+  emptyContainer: {
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center' }
 });
